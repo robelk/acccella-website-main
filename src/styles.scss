@@ -1,0 +1,127 @@
+/* Imported fonts */
+@font-face {
+    font-family: 'PPNeueMontreal';
+    src: url('./assets/fonts/PPNEUEMONTREAL-BOLD.ttf') format('truetype'),
+         url('./assets/fonts/PPNEUEMONTREAL-BOLD.woff') format('woff'),
+         url('./assets/fonts/PPNEUEMONTREAL-BOLD.OTF') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PPNeueMontreal';
+    src: url('./assets/fonts/PPNEUEMONTREAL-BOOK.ttf') format('truetype'),
+         url('./assets/fonts/PPNEUEMONTREAL-BOOK.woff') format('woff'),
+         url('./assets/fonts/PPNEUEMONTREAL-BOOK.OTF') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PPNeueMontreal';
+    src: url('./assets/fonts/PPNEUEMONTREAL-ITALIC.ttf') format('truetype'),
+         url('./assets/fonts/PPNEUEMONTREAL-ITALIC.woff') format('woff'),
+         url('./assets/fonts/PPNEUEMONTREAL-ITALIC.OTF') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PPNeueMontreal';
+    src: url('./assets/fonts/PPNEUEMONTREAL-MEDIUM.ttf') format('truetype'),
+         url('./assets/fonts/PPNEUEMONTREAL-MEDIUM.woff') format('woff'),
+         url('./assets/fonts/PPNEUEMONTREAL-MEDIUM.OTF') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Global font styles */
+$font-family: "PPNeueMontreal", sans-serif;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-small: 100;
+
+/* Font styles for headings, paragraphs, etc. */
+h1, h2, li, p, button p {
+    font-family: $font-family;
+    font-style: normal !important;
+}
+
+h1 {
+    font-size: 100px !important;
+    font-weight: $font-weight-medium !important;
+
+    @media (max-height: 901px) {
+        font-size: 80px !important;
+    }
+}
+
+h2 {
+    font-size: 43px !important;
+    font-weight: $font-weight-medium !important;
+
+    @media (max-height: 901px) {
+        font-size: 36px !important;
+    }
+}
+
+p {
+    font-size: 26px !important;
+    font-weight: $font-weight-small !important;
+
+    @media (max-height: 901px) {
+        font-size: 21px !important;
+    }
+}
+
+li {
+    font-size: 21px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+    h1 {
+        font-size: 40px !important;
+        letter-spacing: 0.2px;
+    }
+
+    h2 {
+        font-size: 20px !important;
+    }
+
+    p {
+        font-size: 18px !important;
+    }
+
+    li {
+        font-size: 18px !important;
+    }
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.startpage-container {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.startpage-header {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.overlay-container {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.overlay-text-container {
+    max-width: 100%;
+    overflow-x: hidden;
+}

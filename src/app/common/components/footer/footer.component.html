@@ -1,0 +1,43 @@
+<div class="footer-container">
+    <div class="row footer-happy-container">
+        <div class="col position-relative">
+            <h1 class="footer-100">100%</h1>
+            <p class="footer-happy-text">Kundnöjdhet är kärnan i allt vi gör. Med vår 100 % nöjdhetsgaranti kan du känna
+                dig helt trygg. Är du inte nöjd, tar vi inte betalt. Ditt förtroende är vårt främsta mål.</p>
+            <div class="footer-happy-button-container">
+                <h2 class="footer-happy-button-text mb-0">Läs mer om vår nöjdhetsgaranti</h2>
+                <div class="footer-button">
+                    <span class="material-symbols-outlined">
+                        outbound
+                    </span>
+                </div>
+            </div>
+            <p class="footer-cred">Acccella © 2024</p>
+        </div>
+        <div class="col h-100">
+            <div class="footer-contact-container">
+                <h1 class="footer-contact-header mb-3">Kontakta oss</h1>
+                <p class="footer-contact-paragrapgh mb-5">Vill du diskutera ett projekt eller koncept? Fyll i formuläret
+                    så tar vi det vidare tillsammans.</p>
+                <form (ngSubmit)="onSubmit()">
+                    <input class="footer-contact-input" type="text" placeholder="Fullständigt namn"
+                        [(ngModel)]="contactForm.name" name="name" required>
+                    <input class="footer-contact-input" type="text" placeholder="Företag"
+                        [(ngModel)]="contactForm.company" name="company">
+                    <input class="footer-contact-input" type="email" placeholder="E-post"
+                        [(ngModel)]="contactForm.email" name="email" required>
+                    <input class="footer-contact-input" type="text" placeholder="Ämne" [(ngModel)]="contactForm.subject"
+                        name="subject">
+                    <textarea class="footer-contact-input" rows="3" placeholder="Meddelande"
+                        [(ngModel)]="contactForm.message" name="message" required></textarea>
+                    <button class="footer-contact-button" type="submit">Skicka meddelande</button>
+                </form>
+
+                <p *ngIf="isSubmitted" class="success-message">Vi har mottagit ditt meddelande och återkommer så snart
+                    som möjligt. Tack!</p>
+            </div>
+        </div>
+    </div>
+    <div class="row footer-links-container">
+    </div>
+</div>

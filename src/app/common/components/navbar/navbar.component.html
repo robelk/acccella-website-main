@@ -1,0 +1,76 @@
+<div class="desktop-menu">
+    <div class="side-menu" [class.active]="isMenuOpen">
+
+        <div class="menu-header-container d-flex">
+            <div class="menu-header">
+                <div class="menu-header-logo"></div>
+                <h2 class="menu-header-text mb-0">Acccella</h2>
+            </div>
+
+            <div class="menu-header-close">
+                <span class="material-symbols-outlined" (click)="closeMenu()">
+                    arrow_left_alt
+                </span>
+            </div>
+        </div>
+        <div class="menu-link-container">
+            <h2 class="menu-link">Webb.</h2>
+            <h2 class="menu-link">Internt.</h2>
+            <h2 class="menu-link">Mobilt.</h2>
+            <h2 class="menu-link">Kunskap och inspiration.</h2>
+            <h2 class="menu-link">Branschlösningar.</h2>
+            <h2 class="menu-link">Kontakt.</h2>
+        </div>
+
+        <div class="menu-link-button-container">
+            <h2 class="menu-link-button-text mb-0">Din Innovation. Vår Precision. Kontakta oss.</h2>
+            <div class="menu-link-button">
+                <span class="material-symbols-outlined">
+                    outbound
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar-margin"></div>
+    <div class="navbar-container">
+        <div class="navbar-main-menu">
+            <div class="row">
+                <div class="col">
+                    <div class="navbar-main-menu">
+                        <ul class="navbar-menu-list d-flex">
+                            <div class="navbar-logo"></div>
+                            <li class="navbar-menu-item" (click)="openMenu()">Webb</li>
+                            <li class="navbar-menu-item" (click)="openMenu()">Internt</li>
+                            <li class="navbar-menu-item" (click)="openMenu()">Mobilt</li>
+                            <li class="navbar-menu-item" (click)="openMenu()">Kunskap och inspiration</li>
+                            <li class="navbar-menu-item" (click)="openMenu()">Branschlösningar</li>
+                            <li class="navbar-menu-item" (click)="openMenu()">Kontakt</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="navbar-contact-menu">
+                        <button class="navbar-contact-button">Kontakt</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="mobile-menu">
+    <div class="mobile-menu-header">
+        <div class="mobile-logo"></div>
+        <span class="material-symbols-outlined" (click)="toggleMobileMenu()">menu</span>
+    </div>
+    <ul class="mobile-menu-list" [class.active]="isMobileMenuOpen">
+        <li class="navbar-menu-item" (click)="openMenu()">Webb</li>
+        <li class="navbar-menu-item" (click)="openMenu()">Internt</li>
+        <li class="navbar-menu-item" (click)="openMenu()">Mobilt</li>
+        <li class="navbar-menu-item" (click)="openMenu()">Kunskap och inspiration</li>
+        <li class="navbar-menu-item" (click)="openMenu()">Branschlösningar</li>
+        <li class="navbar-menu-item mb-4" (click)="openMenu()">Kontakt</li>
+    </ul>
+</div>       

@@ -1,0 +1,123 @@
+<app-navbar></app-navbar>
+<div class="startpage-container">
+    <div class="startpage-header">
+        <div class="startpage-header-video-container">
+            <video class="startpage-header-video" autoplay muted loop playsinline>
+                <source src="../../../../assets/video/startpage-movie-acccella.mp4" type="video/mp4">
+            </video>
+            <div class="overlay-container">
+                <div class="overlay-text-container">
+                    <h1 class="video-header">Vi tyglar kraftfull teknologi och ger dig kontrollen.</h1>
+                    <p class="video-paragrapgh">Ge din verksamhet kraften att växa och möta morgondagens utmaningar.
+                        Våra innovativa lösningar förbättrar effektiviteten och skapar en stark grund för långsiktig
+                        tillväxt. Med oss bygger du en framtidssäkrad verksamhet där teknologi och affärsbehov förenas.
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col mobile-scroll">
+                        <div class="overlay-scroll-container">
+                            <div class="scroll-arrow">
+                                <span class="material-symbols-outlined">
+                                    south
+                                </span>
+                            </div>
+                            <p class="scroll-text">Scroll</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="overlay-button-container">
+                            <div class="row gap-0 overlay-buttons-mobile">
+                                <div class="col">
+                                    <div class="header-button-container header-button-first">
+                                        <h2 class="header-button">Se hur det fungerar.</h2>
+                                        <span class="material-symbols-outlined">
+                                            outbound
+                                        </span>
+                                        <!-- <div class="button-hover"></div> -->
+                                    </div>
+
+                                </div>
+                                <div class="col">
+                                    <div class="header-button-container mb-2">
+                                        <h2 class="header-button">Kontakta oss.</h2>
+                                        <span class="material-symbols-outlined">
+                                            outbound
+                                        </span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="overview-container">
+    <div class="overview-feature-container">
+        <div class="overview-feature-text">
+            <h1>Skräddarsydda lösningar för webb, interna system och mobila plattformar.</h1>
+        </div>
+        <div class="overview-feature-buttons d-flex">
+            <button *ngFor="let label of buttonLabels; let i = index" class="overview-feature-button"
+                (click)="changeImage(i)">
+                {{ label }}
+            </button>
+        </div>
+    </div>
+
+    <div class="overview-feature-image-container">
+        <div class="overview-feature-image" [ngClass]="{ 'fade-out': isFading }"
+            [ngStyle]="{ 'background-image': 'url(' + currentImage + ')' }">
+        </div>
+        <div class="overview-feature-image-description-mobile">
+            <p class="image-description-text mb-0">Statistik och analys</p>
+            <span class="material-symbols-outlined">
+                play_pause
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="services-container">
+    <div class="row d-flex services-feature-container">
+        <div class="col-12 services-feature-text">
+            <h1 class="services-text">Vi skapar upplevelser som gör skillnad.</h1>
+            <p class="services-paragragh">Vi omvandlar dina affärsutmaningar till digitala möjligheter. Genom att
+                fokusera på både användarupplevelse och affärsresultat skapar vi lösningar som engagerar, överraskar och
+                leder till framgång.</p>
+        </div>
+        <div class="col-md col-12 services-feature" *ngFor="let service of services" [ngStyle]="{
+            'background-image': 'url(' + service.imageUrl + ')'
+          }">
+            <div class="services-button">
+                <h2 class="service-text ms-3 mt-3">{{ service.text }}</h2>
+                <div class="services-button-container">
+                    <span class="material-symbols-outlined">
+                        outbound
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="technology-container">
+    <div class="row">
+        <div class="col-md col-12">
+            <div class="technology-text-container">
+                <h1 class="technology-header">Modern teknik. Effektivt arbetsflöde.</h1>
+                <p class="technology-text">Vi kombinerar modern teknik med optimerade processer för att ge dig sömlösa
+                    och kraftfulla arbetsflöden. Våra lösningar gör din verksamhet mer produktiv och skalbar, idag och i
+                    framtiden.</p>
+            </div>
+        </div>
+        <div class="col-md col-12">
+            <img src="../../../../assets/images/tech.png" class="technology-image" />
+            <img src="../../../../assets/images/tech-mobile.png" class="technology-image-mobile" />
+        </div>
+    </div>
+</div>
+<app-footer></app-footer> 
